@@ -1,0 +1,4 @@
+export const FETCH_TRAVELS = 'FETCH_TRAVELS';
+export const FETCH_TRAVEL = 'FETCH_TRAVEL';
+export const CREATE_TRAVEL = 'CREATE_TRAVEL';
+export const DELETE_TRAVEL = 'DELETE_TRAVEL';

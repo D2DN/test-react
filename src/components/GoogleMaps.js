@@ -13,7 +13,7 @@ export default class GoogleMaps extends Component{
 
     render(){
         return(
-            <div ref='map'/>
+            <div ref="map"/>
         );
     }
 }

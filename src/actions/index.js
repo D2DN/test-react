@@ -1,10 +1,5 @@
 import axios from 'axios';
-
-export const FETCH_TRAVELS = 'fetch_travels';
-export const FETCH_TRAVEL = 'fetch_travel';
-export const CREATE_TRAVEL = 'create_travel';
-export const DELETE_TRAVEL = 'delete_travel';
-
+import { FETCH_TRAVELS , FETCH_TRAVEL, CREATE_TRAVEL, DELETE_TRAVEL} from 'actions/actionTypes';
 
 const ROOT_URL = 'https://reduxblog.herokuapp.com/api';
 const API_KEY = '?key=dorian123456789';
@@ -28,7 +23,6 @@ export function createTravel(values, callback){
 
 export function fetchTravel(id) {
     const request = axios.get(`${ROOT_URL}/posts/${id}${API_KEY}`);
-    debugger
     return{
         type: FETCH_TRAVEL,
         payload: request,

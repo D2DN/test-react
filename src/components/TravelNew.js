@@ -2,19 +2,24 @@ import React from 'react';
 import {Field, reduxForm} from 'redux-form';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
-import {createTravel} from "../actions";
+import {createTravel} from 'actions';
 import {Button, Alert, FormGroup} from 'react-bootstrap';
 
 
 class TravelNew extends React.Component {
+    constructor(){
+        super();
+        this.renderField = this.renderField.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
+    }
     renderField({ input, label, meta: {touched, error} }) {
         const validationState = `${touched && error ? 'error' : touched && !error && input.value  ? 'success' : '' }`;
         return (
             <FormGroup validationState={validationState ? validationState : null}>
                 <label>{label}</label>
                 <input
-                    className='form-control'
-                    type='text'
+                    className="form-control"
+                    type="text"
                     {...input}
                 />
                 {touched && error ? <Alert bsStyle="danger"> {error} </Alert> :''}
@@ -30,26 +35,25 @@ class TravelNew extends React.Component {
 
     render() {
         const {handleSubmit} = this.props;
-
         return (
-            <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
+            <form onSubmit={handleSubmit(this.onSubmit)}>
                 <Field
-                    label='Title for travel'
-                    name='title'
+                    label="Title for travel"
+                    name="title"
                     component={this.renderField}
                 />
                 <Field
-                    label='Country'
-                    name='categories'
+                    label="Country"
+                    name="categories"
                     component={this.renderField}
                 />
                 <Field
-                    label='Description'
-                    name='content'
+                    label="Description"
+                    name="content"
                     component={this.renderField}
                 />
-                <Link to='/travel'> <Button bsStyle="danger">Cancel</Button></Link>
-                <Button type='submit' bsStyle="primary">Submit</Button>
+                <Link to="/travel"> <Button bsStyle="danger">Cancel</Button></Link>
+                <Button type="submit" bsStyle="primary">Submit</Button>
             </form>
         );
     }

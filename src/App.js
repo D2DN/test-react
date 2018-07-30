@@ -2,30 +2,27 @@ import React, {Component} from 'react';
 import './App.css';
 
 import {Route, Switch, Link} from 'react-router-dom';
-import {PageHeader, Nav, NavItem} from 'react-bootstrap'
+import {PageHeader} from 'react-bootstrap'
 
-import TravelShow from './components/travel_show';
-import TravelIndex from './components/travel_index';
-import TravelNew from './components/travel_new';
-import ReadMe from "./components/readMe";
+import TravelShow from 'components/TravelShow';
+import TravelIndex from 'components/TravelIndex';
+import TravelNew from 'components/TravelNew';
+import ReadMe from 'components/ReadMe';
 
 class App extends Component {
-
     constructor() {
         super();
         this.state = {
             activeTabs: 1
-        }
+        };
+        this.handleSelect = this.handleSelect.bind(this);
     }
 
     handleSelect(selectedKey) {
-        debugger
         this.setState({activeTabs: Number(selectedKey)});
-        //this.props.history.push(selectedKey);
     };
 
     render() {
-        const {activeTabs} = this.state;
         return (
             <div>
                 <PageHeader>
@@ -36,13 +33,12 @@ class App extends Component {
                     <Link to="/travel">Live Demo</Link>
                 </div>
                 <Switch>
-                    <Route path='/travel/new' component={TravelNew}/>
-                    <Route path='/travel/:id' component={TravelShow}/>
-                    <Route path='/travel' component={TravelIndex}/>
-                    <Route path='/' component={ReadMe}/>
+                    <Route path="/travel/new" component={TravelNew}/>
+                    <Route path="/travel/:id" component={TravelShow}/>
+                    <Route path="/travel" component={TravelIndex}/>
+                    <Route path="/" component={ReadMe}/>
                 </Switch>
             </div>
-
         );
     }
 }

@@ -5,17 +5,17 @@ class ReadMe extends Component {
         return (
             <div>
                 <h3>Test React JS </h3>
-                <h4>Objectifs</h4>
+                <h4>L'objectifs: </h4>
                 <p>
                     L’objectif de ce test est de reproduire l’application présentée dans onglet « live demo » en
-                    utilisant java script et react JS.
+                    utilisant java script et la librairie React JS.
                     Seront jugés les points suivants :
                     <ul>
                         <li>La structure de votre projet</li>
-                        <li>La qualité du code</li>
-                        <li>Le choix des technos</li>
+                        <li>La qualité du code (bonne pratique, commentaire, test et structure)</li>
+                        <li>Le choix des librairies</li>
                     </ul>
-                    <h4>Application</h4>
+                    <h4>L'application: </h4>
                     <p>
                         Il s’agit d’une application de type carnet de voyage. Elle permet d’écrire des articles sur vos
                         différents voyages.
@@ -25,8 +25,6 @@ class ReadMe extends Component {
                             <ul>
                                 <li>Présentation de l’ensemble des posts</li>
                                 <li>Un bouton pour ajouter un nouvel article</li>
-                                <li>Présentation de l’ensemble des posts</li>
-                                <li>Présentation de l’ensemble des posts</li>
                             </ul>
                             <li>Add travel (si appui sur le bouton « add travel» depuis le sommaire)</li>
                             <ul>
@@ -50,12 +48,14 @@ class ReadMe extends Component {
                                 <li>Bouton pour revenir au sommaire.</li>
                                 <li>Bouton pour supprimer le post</li>
                             </ul>
+                            <li>N'hésitez pas à jouer avec la version de démo pour découvrir les fonctionnalités</li>
                         </ul>
                     </p>
-                    <h4>Application</h4>
+                    <h4>Les régles: </h4>
                     <p>
-                        Pour la réalisation du test vous êtes libre d’utiliser les outils que vous souhaitez.
-                        Cependant, afin de vous aider vous trouverez ci-dessous un ensemble de liens qui peuvent vous
+                        Pour la réalisation du test vous êtes libre d’utiliser les librairies que vous souhaitez.
+                        (ex: Vous pouvez par exemple utiliser redux ou le contexte de react)
+                        Cependant, afin de vous aider, vous trouverez ci-dessous un ensemble de liens qui peuvent vous
                         aider :
                         <ul>
                             <li>Gestion du formulaire :</li>
@@ -63,9 +63,9 @@ class ReadMe extends Component {
                             <li>Pour le style :</li>
                             <a href="https://react-bootstrap.github.io/getting-started/introduction">https://react-bootstrap.github.io/getting-started/introduction</a>
                             <li>Redux :</li>
-                            <a href=" https://redux.js.org/"> https://redux.js.org/</a>
+                            <a href="https://redux.js.org/"> https://redux.js.org/</a>
                             <li>Bonne pratique React JS :</li>
-                            <a href="http://airbnb.io/javascript/react/">http://airbnb.io/javascript/react/</a>
+                            <a href="https://airbnb.io/javascript/react/">http://airbnb.io/javascript/react/</a>
                         </ul>
                     </p>
                 </p>

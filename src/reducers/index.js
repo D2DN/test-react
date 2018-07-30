@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
-import TravelReducer from './reducer_travel';
 import { reducer as formReducer } from 'redux-form';
+
+import TravelReducer from 'reducers/travelReducer';
 
 const rootReducer = combineReducers({
     travel : TravelReducer,
