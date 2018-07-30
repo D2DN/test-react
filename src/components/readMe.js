@@ -69,7 +69,6 @@ class ReadMe extends Component {
                         </ul>
                     </p>
                 </p>
-
             </div>
         );
     }

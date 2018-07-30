@@ -6,7 +6,7 @@ export const CREATE_TRAVEL = 'create_travel';
 export const DELETE_TRAVEL = 'delete_travel';
 
 
-const ROOT_URL = 'http://reduxblog.herokuapp.com/api';
+const ROOT_URL = 'https://reduxblog.herokuapp.com/api';
 const API_KEY = '?key=dorian123456789';
 
 export function fetchTravels() {
